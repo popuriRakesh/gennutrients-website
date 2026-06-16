@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0a7a3d"/>
+      <stop offset="1" stop-color="#38b46d"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+  <g fill="rgba(255,255,255,0.12)">
+    <circle cx="200" cy="200" r="120" />
+    <circle cx="400" cy="140" r="80" />
+    <circle cx="1200" cy="300" r="140" />
+  </g>
+  <text x="50%" y="50%" font-family="Poppins, Arial, sans-serif" font-size="56" fill="rgba(255,255,255,0.95)" text-anchor="middle" dominant-baseline="central">Laboratory • Botanicals • Capsules</text>
+</svg>

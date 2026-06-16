@@ -1,0 +1,23 @@
+.home{
+  padding:40px;
+}
+
+@media(max-width:768px){
+
+  .product-grid,
+  .features,
+  .quality-grid,
+  .contact-grid,
+  .why-grid{
+      grid-template-columns:1fr;
+  }
+
+  .navbar{
+      padding:20px;
+  }
+
+    .overlay h1{
+      font-size:34px;
+    }
+
+}

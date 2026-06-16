@@ -1,0 +1,86 @@
+
+.quote-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:3000;
+  padding:20px;
+}
+
+.quote-modal{
+  width:450px;
+  max-width:100%;
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  position:relative;
+  max-height:90vh;
+  overflow-y:auto;
+}
+
+.quote-modal h2{
+  font-size:24px;
+  margin-bottom:18px;
+  color:#0a7a3d;
+  text-align:center;
+}
+
+.quote-modal form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.quote-modal input,
+.quote-modal textarea{
+  padding:12px 14px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.quote-modal textarea{
+  resize:none;
+  height:90px;
+}
+
+.quote-modal button[type="submit"]{
+  background:#0a7a3d;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+}
+
+.close-btn{
+  position:absolute;
+  top:10px;
+  right:15px;
+  border:none;
+  background:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+@media(max-width:768px){
+  .row{
+    grid-template-columns:1fr;
+  }
+
+  .quote-modal{
+    width:95%;
+    padding:20px;
+  }
+}

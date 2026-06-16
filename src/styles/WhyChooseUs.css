@@ -1,0 +1,61 @@
+.why{
+  padding:100px 0;
+  background:#fff;
+}
+
+.why h2{
+  text-align:center;
+  margin-bottom:50px;
+  color:#0a7a3d;
+  font-size:40px;
+}
+
+.why-grid{
+  width:90%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.why-card{
+  background:#fff;
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.why-card:hover{
+  transform:translateY(-10px);
+}
+
+.why-card span{
+  font-size:35px;
+  color:#0a7a3d;
+}
+
+.why-card h3{
+  margin-top:15px;
+}
+
+@media(max-width:768px){
+
+  .product-grid,
+  .features,
+  .quality-grid,
+  .contact-grid,
+  .why-grid{
+      grid-template-columns:1fr;
+  }
+
+  .navbar{
+      padding:20px;
+  }
+
+    .overlay h1{
+      font-size:34px;
+    }
+
+}

@@ -1,0 +1,20 @@
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:#0a7a3d;
+  color:white;
+  padding:80px 5%;
+  text-align:center;
+}
+
+.stat h2{
+  font-size:52px;
+}
+
+.stat p{
+  margin-top:10px;
+}
+
+@media(max-width:768px){
+  .stats{ grid-template-columns:1fr; }
+}
