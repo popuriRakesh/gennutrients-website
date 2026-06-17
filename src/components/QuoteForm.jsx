@@ -1,51 +1,42 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import "../styles/QuoteForm.css";
 
 function QuoteForm({ productName, onClose }) {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    company: "",
-    email: "",
-    phone: "",
-    country: "",
-    quantity: "",
-    message: "",
-  });
+  const [result, setResult] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  const onSubmit = async (event) => {
+    event.preventDefault();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+    setResult("Sending...");
 
-    const serviceID = "YOUR_SERVICE_ID";
-    const templateID = "YOUR_TEMPLATE_ID";
-    const publicKey = "YOUR_PUBLIC_KEY";
+    const formData = new FormData(event.target);
 
-    const templateParams = {
-      product: productName,
-      fullName: formData.fullName,
-      company: formData.company,
-      email: formData.email,
-      phone: formData.phone,
-      country: formData.country,
-      quantity: formData.quantity,
-      message: formData.message,
-    };
+    try {
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
-    emailjs
-      .send(serviceID, templateID, templateParams, publicKey)
-      .then(() => {
-        alert("Inquiry sent successfully!");
-        onClose();
-      })
-      .catch((error) => {
-        console.error(error);
-        alert("Failed to send inquiry");
-      });
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Inquiry sent successfully!");
+
+        event.target.reset();
+
+        setTimeout(() => {
+          onClose();
+        }, 2000);
+      } else {
+        setResult("Failed to send inquiry.");
+      }
+    } catch (err) {
+      console.error(err);
+      setResult("Failed to send inquiry.");
+    }
   };
 
   return (
@@ -54,67 +45,35 @@ function QuoteForm({ productName, onClose }) {
         <button className="close-btn" onClick={onClose}>&times;</button>
         <h2>Request Quote</h2>
 
-        <form onSubmit={sendEmail}>
+        <form onSubmit={onSubmit}>
           <div className="row">
-            <input
-              name="fullName"
-              placeholder="Full Name"
-              value={formData.fullName}
-              onChange={handleChange}
-              required
-            />
+            <input name="fullName" placeholder="Full Name" required />
 
-            <input
-              name="company"
-              placeholder="Company"
-              value={formData.company}
-              onChange={handleChange}
-            />
+            <input name="company" placeholder="Company" />
           </div>
 
           <div className="row">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+            <input type="email" name="email" placeholder="Email" required />
 
-            <input
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
+            <input name="phone" placeholder="Phone" />
           </div>
 
           <div className="row">
-            <input
-              name="country"
-              placeholder="Country"
-              value={formData.country}
-              onChange={handleChange}
-            />
+            <input name="country" placeholder="Country" />
 
-            <input
-              name="quantity"
-              placeholder="Quantity (e.g., 25kg)"
-              value={formData.quantity}
-              onChange={handleChange}
-            />
+            <input name="quantity" placeholder="Quantity (e.g., 25kg)" />
           </div>
 
-          <textarea
-            name="message"
-            placeholder="Additional message"
-            value={formData.message}
-            onChange={handleChange}
-          />
+          <textarea name="message" placeholder="Additional message" />
+
+          <input type="hidden" name="access_key" value="55a96ea8-1523-48e5-9e08-780b0718f463" />
+          <input type="hidden" name="subject" value={`New Quote Request - ${productName || ""}`} />
+          <input type="hidden" name="product" value={productName || ""} />
 
           <button type="submit">Request Quotation</button>
         </form>
+
+        {result && <div className="result-message">{result}</div>}
       </div>
     </div>
   );

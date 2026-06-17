@@ -84,3 +84,10 @@
     padding:20px;
   }
 }
+
+.result-message{
+  text-align:center;
+  margin-top:10px;
+  color:#0a7a3d;
+  font-weight:600;
+}
