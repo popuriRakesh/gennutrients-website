@@ -19,29 +19,29 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact" data-aos="fade-up">
       <div className="contact-container">
-        <h2>Partner With Gen Nutrients</h2>
-        <p>Premium Nutraceutical Ingredients &amp; Botanical Extracts</p>
+        <h2 data-aos="fade-right">Partner With Gen Nutrients</h2>
+        <p data-aos="fade-left">Premium Nutraceutical Ingredients &amp; Botanical Extracts</p>
 
         <div className="contact-grid">
-          <div>
+          <div data-aos="fade-right">
             <h4>Email</h4>
             <p>sales@gennutrients.com</p>
           </div>
 
-          <div>
+          <div data-aos="fade-right" data-aos-delay="100">
             <h4>Phone</h4>
             <p>+1 603-234-2174</p>
           </div>
 
-          <div>
+          <div data-aos="fade-right" data-aos-delay="200">
             <h4>Location</h4>
             <p>New Jersey, USA</p>
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left">
           <div className="row">
             <input name="name" placeholder="Name" value={form.name} onChange={handleChange} required />
             <input name="email" type="email" placeholder="Email" value={form.email} onChange={handleChange} required />

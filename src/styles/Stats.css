@@ -1,20 +1,27 @@
 .stats{
   display:grid;
   grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  padding:80px 5%;
   background:#0a7a3d;
   color:white;
-  padding:80px 5%;
   text-align:center;
 }
 
 .stat h2{
   font-size:52px;
+  font-weight:700;
 }
 
 .stat p{
   margin-top:10px;
+  font-size:18px;
 }
 
 @media(max-width:768px){
-  .stats{ grid-template-columns:1fr; }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
 }

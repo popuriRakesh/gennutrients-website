@@ -25,12 +25,12 @@ function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   return (
     <>
-      <section id="products" className="products">
-      <h2>Featured Ingredients</h2>
+      <section id="products" className="products" data-aos="fade-up">
+      <h2 data-aos="fade-right">Featured Ingredients</h2>
 
       <div className="product-grid">
         {products.map((item, index) => (
-          <div className="product-card" key={index}>
+          <div className="product-card" key={index} data-aos="zoom-in" data-aos-delay={index * 80}>
             <img src={item.img} alt={item.name} className="product-image" />
             <h3>{item.name}</h3>
             <p>{item.use}</p>

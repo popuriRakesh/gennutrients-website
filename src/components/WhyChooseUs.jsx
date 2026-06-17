@@ -13,12 +13,12 @@ const data = [
 
 function WhyChooseUs() {
   return (
-    <section id="why" className="why">
-      <h2>Why Choose Gen Nutrients</h2>
+    <section id="why" className="why" data-aos="fade-up">
+      <h2 data-aos="fade-right">Why Choose Gen Nutrients</h2>
 
       <div className="why-grid">
         {data.map((item, index) => (
-          <div className="why-card" key={index}>
+          <div className="why-card" key={index} data-aos="flip-left" data-aos-delay={index * 80}>
             <span>✓</span>
             <h3>{item}</h3>
           </div>
