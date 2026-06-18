@@ -23,8 +23,8 @@ const products = [
   { name: "Berberine HCL Extract", use: "Metabolic Wellness", category: "Weight Management", img: p1000385859 },
   { name: "Curcumin Extract", use: "Joint Health", category: "Botanical Extracts", img: p1000385861 },
   { name: "Collagen Peptides", use: "Beauty & Wellness", category: "Beauty & Wellness", img: p1000385865 },
-  { name: "Bacopa Monnieri Extract", use: "Cognitive Support", category: "Cognitive Health", img: p1000385863 },
-  { name: "Pomegranate Extract", use: "Antioxidant Support", category: "Beauty & Wellness", img: p1000385867 },
+  { name: "Pomegranate Extract", use: "Cognitive Support", category: "Cognitive Health", img: p1000385863 },
+  { name: "Bacopa Monnieri Extract", use: "Antioxidant Support", category: "Beauty & Wellness", img: p1000385867 },
   { name: "Lion's Mane Extract", use: "Cognitive Health", category: "Cognitive Health", img: p1000385869 },
 ];
 
