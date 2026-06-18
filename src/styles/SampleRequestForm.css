@@ -1,0 +1,82 @@
+.sample-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:4000;
+  padding:20px;
+}
+
+.sample-modal{
+  width:450px;
+  max-width:100%;
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  position:relative;
+}
+
+.sample-modal h2{
+  font-size:22px;
+  color:#0a7a3d;
+  text-align:center;
+  margin-bottom:12px;
+}
+
+.sample-modal form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.sample-modal input,
+.sample-modal textarea{
+  padding:12px 14px;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+
+.sample-modal textarea{
+  height:90px;
+}
+
+.sample-modal button[type="submit"]{
+  background:#0a7a3d;
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+}
+
+.close-btn{
+  position:absolute;
+  top:10px;
+  right:15px;
+  border:none;
+  background:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.result-message{
+  text-align:center;
+  margin-top:10px;
+  color:#0a7a3d;
+  font-weight:600;
+}
+
+@media(max-width:768px){
+  .row{ grid-template-columns:1fr; }
+  .sample-modal{ width:95%; padding:20px; }
+}

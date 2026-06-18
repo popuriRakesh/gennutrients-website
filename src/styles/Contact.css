@@ -36,17 +36,17 @@
 .contact-form{
   margin-top:40px;
   max-width:800px;
-
-.result-message{
-  margin-top:12px;
-  color:#0a7a3d;
-  font-weight:600;
-}
   margin-left:auto;
   margin-right:auto;
   display:flex;
   flex-direction:column;
   gap:12px;
+}
+
+.result-message{
+  margin-top:12px;
+  color:#0a7a3d;
+  font-weight:600;
 }
 
 .contact-form .row{
@@ -80,6 +80,10 @@
   .contact-grid,
   .why-grid{
       grid-template-columns:1fr;
+  }
+
+  .contact-form .row{
+    grid-template-columns:1fr;
   }
 
   .navbar{

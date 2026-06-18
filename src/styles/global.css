@@ -13,6 +13,40 @@ body{
   background:#fff;
 }
 
+:root{
+  --brand-color:#0a7a3d;
+  --muted:#666666;
+  --max-width:1200px;
+  --container-padding:5%;
+}
+
+/* Responsive utilities */
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding-left:var(--container-padding);
+  padding-right:var(--container-padding);
+}
+
+img, video, svg{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* Make interactive controls easier to tap on mobile */
+button, .primary-btn, .quote-modal-btn, .download-brochure-btn, .success-close{
+  min-height:40px;
+  cursor:pointer;
+}
+
+/* Global responsive typography */
+h1{font-size:2.25rem}
+h2{font-size:1.75rem}
+h3{font-size:1.25rem}
+
+
 .card,
 .product-card,
 .quality-card{
@@ -58,5 +92,17 @@ body{
     .overlay h1{
       font-size:34px;
     }
+
+  /* Make buttons full width on small screens */
+  button, .primary-btn, .quote-modal-btn, .download-brochure-btn, .success-close{
+    width:100%;
+  }
+
+  /* Slightly reduce paddings on very small devices */
+  @media(max-width:420px){
+    :root{ --container-padding:4%; }
+    h1{font-size:1.8rem}
+    h2{font-size:1.2rem}
+  }
 
 }

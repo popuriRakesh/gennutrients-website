@@ -3,13 +3,25 @@ import "../styles/ProductModal.css";
 function ProductModal({
   product,
   onClose,
-  onQuote
+  onQuote,
+  onSample,
+  onDocumentation
 }) {
   console.log("ProductModal product:", product);
   if (!product) return null;
 
   const handleRequestQuote = () => {
     onQuote && onQuote(product);
+    onClose && onClose();
+  };
+
+  const handleRequestSample = () => {
+    onSample && onSample(product);
+    onClose && onClose();
+  };
+
+  const handleRequestDocumentation = () => {
+    onDocumentation && onDocumentation(product);
     onClose && onClose();
   };
 
@@ -44,6 +56,12 @@ function ProductModal({
 
         <button className="quote-modal-btn" onClick={handleRequestQuote}>
           Request Quote
+        </button>
+        <button className="sample-modal-btn" onClick={handleRequestSample}>
+          Request Sample
+        </button>
+        <button className="doc-modal-btn" onClick={handleRequestDocumentation}>
+          Request Documentation
         </button>
         <button
           className="download-brochure-btn"

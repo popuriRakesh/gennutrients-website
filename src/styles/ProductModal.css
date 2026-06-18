@@ -86,3 +86,44 @@
   font-weight:600;
   margin-top:12px;
 }
+
+.sample-modal-btn{
+  width:100%;
+  border:none;
+  background:#fff;
+  color:#0a7a3d;
+  padding:14px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+  margin-top:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,.04);
+}
+
+.doc-modal-btn{
+  width:100%;
+  border:none;
+  background:#fff;
+  color:#0a7a3d;
+  padding:14px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:600;
+  margin-top:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,.04);
+}
+
+@media(max-width:768px){
+
+  .modal-content{
+    width:95%;
+    padding:20px;
+  }
+
+  .modal-image{
+    height:200px;
+  }
+
+}

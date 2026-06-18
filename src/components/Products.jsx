@@ -2,6 +2,8 @@ import "../styles/Products.css";
 import { useState, useEffect } from "react";
 import ProductModal from "./ProductModal";
 import QuoteForm from "./QuoteForm";
+import SampleRequestForm from "./SampleRequestForm";
+import DocumentationForm from "./DocumentationForm";
 import p1000385849 from "../assets/products/1000385849.jpeg";
 import p1000385851 from "../assets/products/1000385851.jpeg";
 import p1000385855 from "../assets/products/1000385855.jpeg";
@@ -9,6 +11,9 @@ import p1000385857 from "../assets/products/1000385857.jpeg";
 import p1000385859 from "../assets/products/1000385859.jpeg";
 import p1000385861 from "../assets/products/1000385861.jpeg";
 import p1000385865 from "../assets/products/1000385865.jpeg";
+import p1000385863 from "../assets/products/1000385863.jpeg";
+import p1000385867 from "../assets/products/1000385867.jpeg";
+import p1000385869 from "../assets/products/1000385869.jpeg";
 
 const products = [
   { name: "Boswellia Serrata Extract", use: "Mobility Support", category: "Botanical Extracts", img: p1000385849 },
@@ -17,13 +22,20 @@ const products = [
   { name: "Beetroot Extract", use: "Sports Performance", category: "Sports Nutrition", img: p1000385857 },
   { name: "Berberine HCL Extract", use: "Metabolic Wellness", category: "Weight Management", img: p1000385859 },
   { name: "Curcumin Extract", use: "Joint Health", category: "Botanical Extracts", img: p1000385861 },
-  { name: "Lion's Mane Extract", use: "Cognitive Health", category: "Cognitive Health", img: p1000385865 },
+  { name: "Collagen Peptides", use: "Beauty & Wellness", category: "Beauty & Wellness", img: p1000385865 },
+  { name: "Bacopa Monnieri Extract", use: "Cognitive Support", category: "Cognitive Health", img: p1000385863 },
+  { name: "Pomegranate Extract", use: "Antioxidant Support", category: "Beauty & Wellness", img: p1000385867 },
+  { name: "Lion's Mane Extract", use: "Cognitive Health", category: "Cognitive Health", img: p1000385869 },
 ];
 
 function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showQuoteForm, setShowQuoteForm] = useState(false);
   const [quoteProductName, setQuoteProductName] = useState(null);
+  const [showSampleForm, setShowSampleForm] = useState(false);
+  const [sampleProductName, setSampleProductName] = useState(null);
+  const [showDocForm, setShowDocForm] = useState(false);
+  const [docProductName, setDocProductName] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -117,6 +129,14 @@ function Products() {
           setQuoteProductName(product?.name || selectedProduct?.name);
           setShowQuoteForm(true);
         }}
+        onSample={(product) => {
+          setSampleProductName(product?.name || selectedProduct?.name);
+          setShowSampleForm(true);
+        }}
+        onDocumentation={(product) => {
+          setDocProductName(product?.name || selectedProduct?.name);
+          setShowDocForm(true);
+        }}
       />
 
       {showQuoteForm && (
@@ -125,6 +145,24 @@ function Products() {
           onClose={() => {
             setShowQuoteForm(false);
             setQuoteProductName(null);
+          }}
+        />
+      )}
+      {showSampleForm && (
+        <SampleRequestForm
+          productName={sampleProductName || selectedProduct?.name}
+          onClose={() => {
+            setShowSampleForm(false);
+            setSampleProductName(null);
+          }}
+        />
+      )}
+      {showDocForm && (
+        <DocumentationForm
+          productName={docProductName || selectedProduct?.name}
+          onClose={() => {
+            setShowDocForm(false);
+            setDocProductName(null);
           }}
         />
       )}

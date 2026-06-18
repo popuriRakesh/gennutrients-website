@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/DocumentationForm.css";
 
-function DocumentationForm({ onClose }) {
+function DocumentationForm({ onClose, productName }) {
   const [result, setResult] = useState("");
 
   const onSubmit = async (event) => {
@@ -52,7 +52,7 @@ function DocumentationForm({ onClose }) {
 
           <input type="email" name="email" placeholder="Email" required />
 
-          <input name="productName" placeholder="Product Name" />
+          <input name="productName" placeholder="Product Name" defaultValue={productName || ""} />
 
           <div className="doc-checkboxes">
             <label>
@@ -73,7 +73,7 @@ function DocumentationForm({ onClose }) {
           </div>
 
           <input type="hidden" name="access_key" value="55a96ea8-1523-48e5-9e08-780b0718f463" />
-          <input type="hidden" name="subject" value="Documentation Request" />
+          <input type="hidden" name="subject" value={productName ? `Documentation Request - ${productName}` : "Documentation Request"} />
 
           <button type="submit">Submit Request</button>
         </form>
