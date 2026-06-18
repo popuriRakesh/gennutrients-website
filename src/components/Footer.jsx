@@ -1,11 +1,12 @@
 import "../styles/Footer.css";
+import logo from "../assets/logo.jpeg";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <h3>GEN NUTRIENTS</h3>
+          <img src={logo} alt="Gen Nutrients" className="footer-logo" />
           <p>
             Premium Nutraceutical Ingredients &
             <br />

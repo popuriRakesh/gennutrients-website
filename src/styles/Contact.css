@@ -36,6 +36,12 @@
 .contact-form{
   margin-top:40px;
   max-width:800px;
+
+.result-message{
+  margin-top:12px;
+  color:#0a7a3d;
+  font-weight:600;
+}
   margin-left:auto;
   margin-right:auto;
   display:flex;

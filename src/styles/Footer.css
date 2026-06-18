@@ -26,6 +26,13 @@
   color:#bbb;
 }
 
+.footer-logo{
+  max-width:200px;
+  height:auto;
+  display:block;
+  margin-bottom:12px;
+}
+
 .footer ul{
   list-style:none;
   padding:0;

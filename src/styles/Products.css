@@ -58,6 +58,63 @@
   cursor:pointer;
 }
 
+.search-container{
+  display:flex;
+  justify-content:center;
+  margin-bottom:40px;
+}
+
+.search-input{
+  width:500px;
+  max-width:90%;
+  padding:15px 20px;
+  border:1px solid #ddd;
+  border-radius:40px;
+  font-size:16px;
+  outline:none;
+  transition:.3s;
+}
+
+.search-input:focus{
+  border-color:#0a7a3d;
+  box-shadow:0 0 10px rgba(10,122,61,.2);
+}
+
+.category-tabs{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:40px;
+}
+
+.category-btn{
+  border:none;
+  padding:12px 24px;
+  border-radius:30px;
+  background:#f2f2f2;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+.category-btn:hover{
+  background:#0a7a3d;
+  color:white;
+}
+
+.category-btn.active{
+  background:#0a7a3d;
+  color:white;
+}
+
+.no-products{
+  text-align:center;
+  margin-top:20px;
+  color:#888;
+  font-size:18px;
+}
+
 @media(max-width:768px){
 
   .product-grid,

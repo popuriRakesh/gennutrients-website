@@ -3,19 +3,62 @@ import { useState } from "react";
 
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
+  const [result, setResult] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Website Contact Inquiry");
-    const body = encodeURIComponent(
-      `Name: ${form.name}%0D%0ACompany: ${form.company}%0D%0AEmail: ${form.email}%0D%0AMessage: ${form.message}`
+
+    setResult("Sending...");
+
+    const formData = new FormData();
+
+    formData.append(
+      "access_key",
+      "55a96ea8-1523-48e5-9e08-780b0718f463"
     );
-    window.location.href = `mailto:sales@gennutrients.com?subject=${subject}&body=${body}`;
+
+    formData.append(
+      "subject",
+      "New Contact Form Inquiry"
+    );
+
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("company", form.company);
+    formData.append("message", form.message);
+
+    try {
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Message sent successfully!");
+
+        setForm({
+          name: "",
+          email: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        setResult("Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      setResult("Failed to send message.");
+    }
   };
 
   return (
@@ -52,6 +95,9 @@ function Contact() {
           <textarea name="message" placeholder="Message" value={form.message} onChange={handleChange} rows={4} />
 
           <button type="submit" className="primary-btn">Send Message</button>
+          {result && (
+            <div className="result-message">{result}</div>
+          )}
         </form>
       </div>
     </section>

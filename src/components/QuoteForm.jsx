@@ -3,6 +3,7 @@ import "../styles/QuoteForm.css";
 
 function QuoteForm({ productName, onClose }) {
   const [result, setResult] = useState("");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -23,13 +24,17 @@ function QuoteForm({ productName, onClose }) {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Inquiry sent successfully!");
+        setResult(
+          "Thank you! Your inquiry has been received. Our team will contact you shortly."
+        );
 
         event.target.reset();
+        setShowSuccessModal(true);
 
         setTimeout(() => {
+          setShowSuccessModal(false);
           onClose();
-        }, 2000);
+        }, 3000);
       } else {
         setResult("Failed to send inquiry.");
       }
@@ -42,10 +47,40 @@ function QuoteForm({ productName, onClose }) {
   return (
     <div className="quote-overlay" onClick={onClose}>
       <div className="quote-modal" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose}>&times;</button>
-        <h2>Request Quote</h2>
+        {showSuccessModal ? (
+          <>
+            <button
+              className="close-btn"
+              onClick={() => {
+                setShowSuccessModal(false);
+                onClose();
+              }}
+            >
+              &times;
+            </button>
+            <h2>Inquiry Received</h2>
+            <p className="success-text">
+              Thank you for contacting Gen Nutrients.
+              <br /> Our team will review your requirement and get back to you shortly.
+            </p>
+            <div style={{ textAlign: "center", marginTop: 18 }}>
+              <button
+                className="success-close"
+                onClick={() => {
+                  setShowSuccessModal(false);
+                  onClose();
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </>
+        ) : (
+          <>
+            <button className="close-btn" onClick={onClose}>&times;</button>
+            <h2>Request Quote</h2>
 
-        <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit}>
           <div className="row">
             <input name="fullName" placeholder="Full Name" required />
 
@@ -71,9 +106,11 @@ function QuoteForm({ productName, onClose }) {
           <input type="hidden" name="product" value={productName || ""} />
 
           <button type="submit">Request Quotation</button>
-        </form>
+            </form>
 
-        {result && <div className="result-message">{result}</div>}
+            {result && <div className="result-message">{result}</div>}
+          </>
+        )}
       </div>
     </div>
   );
