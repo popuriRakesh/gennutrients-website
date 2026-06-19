@@ -40,6 +40,30 @@
   margin-top:15px;
 }
 
+.why-desc{
+  margin-top:10px;
+  color:#556;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.why-promise{
+  margin-top:40px;
+  text-align:center;
+}
+
+.why-promise h3{
+  font-size:20px;
+  color:#222;
+  margin-bottom:6px;
+}
+
+.promise-tagline{
+  font-size:20px;
+  color:#0a7a3d;
+  font-weight:700;
+}
+
 @media(max-width:768px){
 
   .product-grid,

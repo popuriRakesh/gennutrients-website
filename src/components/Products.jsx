@@ -16,16 +16,16 @@ import p1000385867 from "../assets/products/1000385867.jpeg";
 import p1000385869 from "../assets/products/1000385869.jpeg";
 
 const products = [
-  { name: "Boswellia Serrata Extract", use: "Mobility Support", category: "Botanical Extracts", img: p1000385849 },
-  { name: "Ashwagandha Extract", use: "Stress Management", category: "Botanical Extracts", img: p1000385851 },
-  { name: "Green Tea Extract", use: "Weight Management", category: "Weight Management", img: p1000385855 },
-  { name: "Beetroot Extract", use: "Sports Performance", category: "Sports Nutrition", img: p1000385857 },
-  { name: "Berberine HCL Extract", use: "Metabolic Wellness", category: "Weight Management", img: p1000385859 },
-  { name: "Curcumin Extract", use: "Joint Health", category: "Botanical Extracts", img: p1000385861 },
+  { name: "Boswellia Serrata Extract", use: "Supports joint comfort and mobility", category: "Botanical Extracts", img: p1000385849 },
+  { name: "Ashwagandha Extract", use: "Supports stress balance and overall wellness", category: "Botanical Extracts", img: p1000385851 },
+  { name: "Green Tea Extract", use: "Supports weight management and metabolism", category: "Weight Management", img: p1000385855 },
+  { name: "Beetroot Extract", use: "Supports endurance and sports performance", category: "Sports Nutrition", img: p1000385857 },
+  { name: "Berberine HCL Extract", use: "Supports metabolic health and balance", category: "Weight Management", img: p1000385859 },
+  { name: "Curcumin Extract", use: "Supports joint health and inflammatory balance", category: "Botanical Extracts", img: p1000385861 },
   { name: "Collagen Peptides", use: "Beauty & Wellness", category: "Beauty & Wellness", img: p1000385865 },
   { name: "Pomegranate Extract", use: "Cognitive Support", category: "Cognitive Health", img: p1000385863 },
   { name: "Bacopa Monnieri Extract", use: "Antioxidant Support", category: "Beauty & Wellness", img: p1000385867 },
-  { name: "Lion's Mane Extract", use: "Cognitive Health", category: "Cognitive Health", img: p1000385869 },
+  { name: "Lion's Mane Extract", use: "Supports brain health and cognitive performance", category: "Cognitive Health", img: p1000385869 },
 ];
 
 function Products() {

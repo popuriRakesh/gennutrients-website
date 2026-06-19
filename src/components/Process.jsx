@@ -1,4 +1,5 @@
 import "../styles/Process.css";
+import ProcessGallery from "./ProcessGallery";
 
 const steps = [
   "Raw Material",
@@ -24,6 +25,8 @@ function Process() {
           </div>
         ))}
       </div>
+
+      <ProcessGallery steps={steps} />
     </section>
   );
 }
