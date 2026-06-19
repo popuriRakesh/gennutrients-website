@@ -7,15 +7,44 @@ function About() {
         <h2 data-aos="fade-right">About Gen Nutrients</h2>
 
         <p data-aos="fade-left">
-          At Gen Nutrients, we believe exceptional health products begin with
-          exceptional ingredients.
+          Gen Nutrients is a trusted supplier of premium nutraceutical
+          ingredients and botanical extracts for manufacturers, formulators, and
+          wellness brands worldwide. We focus on reliable sourcing, consistent
+          quality, and comprehensive documentation to support the development
+          of safe and effective products.
         </p>
 
-        <p data-aos="fade-left">
-          As a trusted ingredient partner, we supply premium nutraceutical
-          ingredients, botanical extracts, and functional raw materials to
-          customers across the global health and wellness industry.
-        </p>
+        <div className="about-grid">
+          <div className="about-card" data-aos="fade-up">
+            <h3>Our Mission</h3>
+            <p>
+              To provide high-quality nutraceutical ingredients through dependable
+              sourcing, transparent communication, and exceptional service,
+              helping our partners achieve long-term success.
+            </p>
+          </div>
+
+          <div className="about-card" data-aos="fade-up" data-aos-delay="80">
+            <h3>Our Vision</h3>
+            <p>
+              To become a globally trusted ingredient partner known for quality,
+              integrity, and reliable supply solutions that support innovation
+              in the health and wellness industry.
+            </p>
+          </div>
+        </div>
+
+        <div className="about-story" data-aos="fade-up" data-aos-delay="160">
+          <h3>Our Story</h3>
+          <p>
+            Gen Nutrients was founded to make nutraceutical ingredient sourcing
+            simple, reliable, and transparent. We work with trusted
+            manufacturing partners to provide high-quality ingredients backed by
+            proper documentation and quality standards. Our focus is on
+            consistency, dependable supply, and building long-term relationships
+            with manufacturers, formulators, and wellness brands worldwide.
+          </p>
+        </div>
 
         <div className="features">
           <div className="card" data-aos="zoom-in">

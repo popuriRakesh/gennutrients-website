@@ -20,6 +20,25 @@
   line-height:1.8;
 }
 
+.quality-header .doc-available{
+  margin-top:18px;
+  text-align:left;
+  display:inline-block;
+}
+
+.quality-header .doc-available h4{
+  color:#0a7a3d;
+  margin:6px 0 8px 0;
+  font-size:16px;
+}
+
+.quality-header .doc-available ul{
+  margin:0;
+  padding-left:20px;
+  color:#444;
+  line-height:1.7;
+}
+
 .quality-grid{
   margin-top:60px;
   display:grid;

@@ -3,14 +3,14 @@ import "../styles/ProcessGallery.css";
 
 function ProcessGallery({ steps = [] }) {
   const filenames = [
-    "Raw Material Sourcing.png",
-    "Pulverization.jpg",
-    "Extraction.jpg",
-    "Purification.jpg",
-    "Testing.jpg",
-    "Packaging.jpg",
-    "Documentation.jpg",
-    "Global Distribution.jpg",
+    "Raw Material Selection.png",
+    "Pulverization.png",
+    "Extraction.png",
+    "Purification.png",
+    "Testing.png",
+    "Packaging.png",
+    "Documentation.png",
+    "Global Distribution.png",
   ];
 
   const images = filenames.map((f) => encodeURI(`/process/${f}`));
@@ -50,7 +50,14 @@ function ProcessGallery({ steps = [] }) {
     <>
       <div className="process-gallery">
         {images.map((src, idx) => (
-          <div className="process-thumb" key={idx} onClick={() => openLightbox(idx)}>
+          <div
+            className={`process-thumb ${idx === 0 ? "highlight" : ""}`}
+            key={idx}
+            onClick={() => openLightbox(idx)}
+          >
+            <div className={`thumb-badge ${idx === 0 ? "primary" : ""}`} aria-hidden>
+              {idx + 1}
+            </div>
             <img src={src} alt={steps?.[idx] || `Process ${idx + 1}`} />
             {steps?.[idx] && <div className="thumb-caption">{steps[idx]}</div>}
           </div>

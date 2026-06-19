@@ -40,6 +40,33 @@
   margin-bottom:10px;
 }
 
+/* About sub-sections */
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin:22px 0;
+}
+
+.about-card{
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.about-card h3{ color:var(--brand-color); margin-bottom:8px; }
+
+.about-story{
+  margin-top:18px;
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  color:#333;
+  line-height:1.7;
+}
+
 @media(max-width:768px){
 
   .product-grid,
@@ -58,4 +85,9 @@
       font-size:34px;
     }
 
+}
+
+@media(max-width:768px){
+  .about-grid{ grid-template-columns:1fr; }
+  .about-story{ padding:14px; }
 }

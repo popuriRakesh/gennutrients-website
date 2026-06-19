@@ -1,51 +1,40 @@
 import "../styles/WhyChooseUs.css";
 
+// NOTE: Place your images in `src/assets/why/` named why-1.png .. why-8.png
+import why1 from "../assets/why/Premium Quality Ingredients.png";
+import why2 from "../assets/why/Comprehensive Documentation.png";
+import why3 from "../assets/why/Flexible MOQ.png";
+import why4 from "../assets/why/Reliable Supply Chain.png";
+import why5 from "../assets/why/Customer-Focused Support.png";
+import why6 from "../assets/why/Competitive Pricing.png";
+import why7 from "../assets/why/Trust & Transparency.png";
+import why8 from "../assets/why/Global Sourcing Network.png";
+
+const icons = [why1, why2, why3, why4, why5, why6, why7, why8];
+
+// Items mapped to the provided images (why-1 .. why-8)
 const items = [
-  {
-    title: "Premium Quality Ingredients",
-    desc: "Carefully sourced and tested to ensure consistent quality and performance."
-  },
-  {
-    title: "Comprehensive Documentation",
-    desc: "We provide COA, Specifications, MSDS, TDS, and regulatory documents to support compliance and manufacturing needs."
-  },
-  {
-    title: "Flexible MOQ (Low Minimum Order Quantity)",
-    desc: "We support startups, small businesses, and large manufacturers with flexible ordering options."
-  },
-  {
-    title: "Reliable Supply Chain",
-    desc: "Consistent sourcing and timely delivery to ensure uninterrupted production."
-  },
-  {
-    title: "Customer-Focused Support",
-    desc: "Dedicated support from inquiry to delivery for a smooth sourcing experience."
-  },
-  {
-    title: "Competitive Pricing",
-    desc: "High-quality ingredients offered at cost-effective and market-competitive pricing."
-  },
-  {
-    title: "Trust & Transparency",
-    desc: "Clear communication, honest sourcing practices, and reliable business relationships."
-  },
-  {
-    title: "Global Sourcing Network",
-    desc: "Access to a wide range of nutraceutical, botanical, and functional ingredients from trusted suppliers worldwide."
-  }
+  { title: "Premium Quality Ingredients", subtitle: "Laboratory & Testing" },
+  { title: "Comprehensive Documentation", subtitle: "Documents & Certificate" },
+  { title: "Flexible MOQ", subtitle: "Product Packaging" },
+  { title: "Reliable Supply Chain", subtitle: "Warehouse & Truck" },
+  { title: "Customer-Focused Support", subtitle: "Customer Support Agent" },
+  { title: "Competitive Pricing", subtitle: "Calculator & Growth Chart" },
+  { title: "Trust & Transparency", subtitle: "Handshake Shield" },
+  { title: "Global Sourcing Network", subtitle: "World Map" },
 ];
 
 function WhyChooseUs() {
   return (
     <section id="why" className="why" data-aos="fade-up">
-      <h2 data-aos="fade-right">Why Choose Gen Nutrients</h2>
+      <h2 data-aos="fade-right">Why Leading Brands Choose Gen Nutrients</h2>
 
       <div className="why-grid">
         {items.map((item, index) => (
           <div className="why-card" key={index} data-aos="flip-left" data-aos-delay={index * 80}>
-            <span>✓</span>
-            <h3>{item.title}</h3>
-            <p className="why-desc">{item.desc}</p>
+            <img src={icons[index]} alt={item.title} className="why-icon" />
+            <h3 className="why-title">{item.title}</h3>
+            <p className="why-subtitle">{item.subtitle}</p>
           </div>
         ))}
       </div>

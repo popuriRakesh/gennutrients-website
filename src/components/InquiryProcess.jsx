@@ -4,36 +4,22 @@ import {
   FaFileAlt,
   FaComments,
   FaFileInvoiceDollar,
-  FaTruck
+  FaClipboardCheck,
+  FaFlask,
+  FaBoxOpen,
+  FaShippingFast
 } from "react-icons/fa";
 
 function InquiryProcess() {
   const steps = [
-    {
-      icon: <FaPaperPlane />,
-      title: "Submit Inquiry",
-      text: "Send your ingredient requirements through our quote form."
-    },
-    {
-      icon: <FaFileAlt />,
-      title: "Receive Documentation",
-      text: "COA, TDS, MSDS and specifications shared upon request."
-    },
-    {
-      icon: <FaComments />,
-      title: "Discuss Requirements",
-      text: "Our team reviews your application and sourcing needs."
-    },
-    {
-      icon: <FaFileInvoiceDollar />,
-      title: "Receive Quotation",
-      text: "Competitive pricing and supply options are provided."
-    },
-    {
-      icon: <FaTruck />,
-      title: "Order Fulfillment",
-      text: "Reliable sourcing and delivery support for your business."
-    }
+    { icon: <FaPaperPlane />, title: "Submit Inquiry", text: "Submit your ingredient inquiry using our quote form." },
+    { icon: <FaFileAlt />, title: "Receive Product Specifications", text: "Receive COA, TDS, MSDS and product specification sheets." },
+    { icon: <FaComments />, title: "Discuss Requirements", text: "Discuss application, quantities and timelines with our team." },
+    { icon: <FaFileInvoiceDollar />, title: "Receive Quotation", text: "Get a competitive quotation and supply options." },
+    { icon: <FaClipboardCheck />, title: "Order Confirmation", text: "Confirm your order and finalize production details." },
+    { icon: <FaFlask />, title: "Sourcing & Testing", text: "We source raw materials and perform required testing." },
+    { icon: <FaBoxOpen />, title: "Packaging & Documentation", text: "Packaging is prepared and documentation is provided." },
+    { icon: <FaShippingFast />, title: "Global Delivery", text: "We arrange shipping and global delivery logistics." }
   ];
 
   return (

@@ -13,6 +13,13 @@ function Certifications() {
         </p>
       </div>
 
+      <div className="cert-logos" aria-hidden>
+        <img src="/certs/FDA.png" alt="FDA" />
+        <img src="/certs/FSSAI.png" alt="FSSAI" />
+        <img src="/certs/GMP.png" alt="GMP" />
+        <img src="/certs/ISO22000.png" alt="ISO 22000" />
+      </div>
+
       <div className="cert-grid">
         <div className="cert-card">
           <FaCheckCircle />

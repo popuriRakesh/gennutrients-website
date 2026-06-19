@@ -36,15 +36,30 @@
   color:#0a7a3d;
 }
 
-.why-card h3{
-  margin-top:15px;
+.why-icon{
+  width:72px;
+  height:72px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
 }
 
-.why-desc{
-  margin-top:10px;
+.why-card h3{
+  margin-top:12px;
+}
+
+.why-title{
+  font-size:18px;
+  color:#0a7a3d;
+  margin:6px 0 6px 0;
+}
+
+.why-subtitle{
+  margin:0;
   color:#556;
-  font-size:14px;
-  line-height:1.6;
+  font-size:13px;
+  line-height:1.5;
+  font-weight:600;
 }
 
 .why-promise{

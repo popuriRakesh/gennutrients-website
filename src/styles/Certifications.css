@@ -28,6 +28,26 @@
   gap:25px;
 }
 
+.cert-logos{
+  display:flex;
+  gap:28px;
+  justify-content:center;
+  align-items:center;
+  margin:18px 0 28px;
+  flex-wrap:wrap;
+}
+
+.cert-logos img{
+  height:64px;
+  width:auto;
+  object-fit:contain;
+  filter:grayscale(0);
+  opacity:0.95;
+  transition:transform .18s ease, opacity .18s ease;
+}
+
+.cert-logos img:hover{ transform:translateY(-6px) scale(1.02); opacity:1; }
+
 .cert-card{
   background:#f8f9fa;
   padding:35px;
