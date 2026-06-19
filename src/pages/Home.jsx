@@ -7,7 +7,7 @@ import About from "../components/About";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Process from "../components/Process";
 import Products from "../components/Products";
-import Quality from "../components/Quality";
+import Quality from "../components/Quality.js";
 import Certifications from "../components/Certifications";
 import TrustedBy from "../components/TrustedBy";
 import InquiryProcess from "../components/InquiryProcess";
