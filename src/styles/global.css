@@ -49,14 +49,19 @@ h3{font-size:1.25rem}
 
 .card,
 .product-card,
-.quality-card{
-  transition:.4s;
+.quality-card,
+.why-card,
+.trusted-card,
+.cert-card,
+.process-card{
+  transition: transform .35s ease, box-shadow .35s ease;
+  will-change: transform;
 }
 
-.card:hover,
-.product-card:hover,
-.quality-card:hover{
-  transform:translateY(-8px);
+/* Unified hover lift effect for card-like elements */
+:is(.card, .product-card, .quality-card, .why-card, .trusted-card, .cert-card, .process-card):hover{
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow: 0 14px 30px rgba(10,122,61,0.08) !important;
 }
 
 .whatsapp{

@@ -10,11 +10,15 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
+    if (!loading) {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+      // Ensure AOS recalculates positions for content that mounted after the loader
+      AOS.refresh();
+    }
+  }, [loading]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
