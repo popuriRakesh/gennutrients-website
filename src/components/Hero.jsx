@@ -7,15 +7,6 @@ function Hero() {
       <section id="home" className="hero">
         <img src={heroBanner} alt="Gen Nutrients banner" className="hero-banner" />
       </section>
-      <section className="trust-bar" aria-label="Trust bar">
-        <div className="container trust-items">
-          <div className="trust-item">GMP Compliant Manufacturing Partners</div>
-          <div className="trust-item">COA Available</div>
-          <div className="trust-item">Third-Party Testing Support</div>
-          <div className="trust-item">Global Supply Network</div>
-          <div className="trust-item">Technical Documentation Provided</div>
-        </div>
-      </section>
 
       <section className="hero-copy" aria-labelledby="hero-heading">
         <div className="container">

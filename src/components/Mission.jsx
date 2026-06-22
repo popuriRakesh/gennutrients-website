@@ -2,7 +2,7 @@ import "../styles/About.css";
 
 function Mission() {
   return (
-    <section id="mission" className="mission" data-aos="fade-up">
+    <section id="mission" className="about" data-aos="fade-up">
       <div className="container">
         <h2 data-aos="fade-right">Our Mission</h2>
 

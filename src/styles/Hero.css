@@ -35,7 +35,7 @@
 /* Hero copy section (below banner) */
 .hero-copy{
   background: #fff;
-  padding: 36px 0;
+  padding: 18px 0;
   color: var(--brand-color);
 }
 .hero-copy .container{
@@ -95,43 +95,5 @@
   .hero-keypoints li{ flex: 1 1 100%; justify-content: center; }
 }
 
-/* Trust bar (below hero copy) */
-.trust-bar{
-  background: var(--brand-color);
-  color: #fff;
-  padding: 12px 0;
-}
-.trust-items{
-  display:flex;
-  gap:18px;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-.trust-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:600;
-  padding:8px 12px;
-  color:#fff;
-  flex:1 1 auto;
-  min-width:180px;
-}
-.trust-item::before{
-  content: '\2713';
-  display:inline-block;
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  background: rgba(255,255,255,0.12);
-  color:#fff;
-  text-align:center;
-  line-height:22px;
-  font-size:12px;
-}
-@media(max-width:768px){
-  .trust-items{ gap:10px; }
-  .trust-item{ justify-content:center; min-width: 140px; }
-}
+/* trust bar removed */
 
