@@ -90,6 +90,16 @@
   color:#0a7a3d;
 }
 
+.footer-contact a{
+  text-decoration:none;
+  color:#fff;
+  transition:.2s;
+}
+
+.footer-contact a:hover{
+  color:#0a7a3d;
+}
+
 @media(max-width:768px){
 
   .product-grid,

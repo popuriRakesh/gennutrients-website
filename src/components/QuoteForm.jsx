@@ -101,7 +101,7 @@ function QuoteForm({ productName, onClose }) {
 
           <textarea name="message" placeholder="Additional message" />
 
-          <input type="hidden" name="access_key" value="55a96ea8-1523-48e5-9e08-780b0718f463" />
+          <input type="hidden" name="access_key" value="ee891363-58cc-48cc-8f93-1aa93843fa32" />
           <input type="hidden" name="subject" value={`New Quote Request - ${productName || ""}`} />
           <input type="hidden" name="product" value={productName || ""} />
 

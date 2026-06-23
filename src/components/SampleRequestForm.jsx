@@ -11,7 +11,7 @@ function SampleRequestForm({ onClose, productName }) {
 
     formData.append(
       "access_key",
-      "55a96ea8-1523-48e5-9e08-780b0718f463"
+      "ee891363-58cc-48cc-8f93-1aa93843fa32"
     );
 
     formData.append("subject", `Sample Request - ${productName || ""}`);
